@@ -1,0 +1,66 @@
+.topbar {
+    height: 72px;
+    background-color: #fff;
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;;
+}
+
+.menuButton {
+    border:none;
+    background: none;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap:28px;
+}
+
+.notification {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification span {
+    position:absolute;
+    top:-4px;
+    right: -4px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    font-size: 10px;
+    display: grid;
+    place-items: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.profile img {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+
+.profile p {
+    margin: 3px 0 0;
+    color: gray;
+    font-size: 13px;
+}
