@@ -1,6 +1,6 @@
 .layout{
     display: flex;
-    background: #f7f8fc;
+    background: var(--bg-layout);
     height: 100vh;
 }
 

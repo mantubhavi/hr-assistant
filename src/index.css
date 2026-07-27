@@ -1,3 +1,27 @@
+:root {
+  /* Background colors */
+  --bg-layout: #f7f8fc;
+  --bg-white: #ffffff;
+
+  /* Primary colors */
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+
+  /* Secondary colors */
+  --secondary-color: #6b7280;
+  --secondary-hover: #4b5563;
+
+  /* Danger colors */
+  --danger-color: #dc2626;
+  --danger-hover: #b91c1c;
+
+  /* Text colors */
+  --text-white: #ffffff;
+  --text-dark: #111827;
+
+  /* Border */
+  --border-radius: 6px;
+}
 
 * {
   margin: 0;
