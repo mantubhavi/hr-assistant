@@ -1,10 +1,10 @@
 .btn {
-  padding: 10px 20px;
+  padding: var(--space-sm) var(--space-md);
   border: none;
-  border-radius: 6px;
-  font-size: 14px;
+  border-radius: var(--radius-md);
+  font-size: var(--font-sm);
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: var(--transition-normal);
 }
 
 .primary {
