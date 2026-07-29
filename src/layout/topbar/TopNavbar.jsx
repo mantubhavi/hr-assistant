@@ -1,10 +1,10 @@
 import { FiBell, FiChevronDown, FiMenu } from "react-icons/fi";
 import styles from "./topNavbar.module.css";
 
-const TopNavbar = () => {
+const TopNavbar = ({ toggleSidebar }) => {
   return (
     <header className={styles.topbar}>
-      <button className={styles.menuButton}>
+      <button className={styles.menuButton} onClick={toggleSidebar}>
         <FiMenu />
       </button>
 
