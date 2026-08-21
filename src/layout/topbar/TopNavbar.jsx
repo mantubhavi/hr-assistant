@@ -1,7 +1,10 @@
-import { FiBell, FiChevronDown, FiMenu } from "react-icons/fi";
+import { FiBell, FiChevronDown, FiMenu, FiMoon, FiSun } from "react-icons/fi";
 import styles from "./topNavbar.module.css";
+import useTheme from "../../hooks/useTheme";
 
 const TopNavbar = ({ toggleSidebar }) => {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <header className={styles.topbar}>
       <button className={styles.menuButton} onClick={toggleSidebar}>
@@ -9,6 +12,10 @@ const TopNavbar = ({ toggleSidebar }) => {
       </button>
 
       <section className={styles.right}>
+        <span onClick={toggleTheme}>
+          {theme === "light" ? <FiMoon /> : <FiSun />}
+        </span>
+
         <button className={styles.notification}>
           <FiBell />
           <span>10</span>

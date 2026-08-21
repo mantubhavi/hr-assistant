@@ -1,4 +1,4 @@
-:root {
+:root[data-theme='light'] {
   /* ===== COLOR SYSTEM =====  */
   /* Background Colors */
   --bg-layout: #f7f8fc;
@@ -80,6 +80,106 @@
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+
+  /* Transition Animation */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+
+  /* ===== LAYOUT SYSTEM ===== */
+  /* Application Layout Sizes */
+  --sidebar-width: 260px;
+  --header-height: 64px;
+  --container-width: 1200px;
+
+  /* ===== LAYER MANAGEMENT ===== */
+  /* Z-Index Levels */
+  --z-sidebar: 100;
+  --z-header: 200;
+  --z-modal: 300;
+}
+
+:root[data-theme='dark'] {
+  /* ===== COLOR SYSTEM ===== */
+  /* Background Colors */
+  --bg-layout: #0f172a;
+  --bg-white: #1e293b;
+  --bg-light: #334155;
+  --bg-dark: #020617;
+
+  /* Primary Colors */
+  --primary-color: #3b82f6;
+  --primary-hover: #60a5fa;
+  --primary-light: #1e3a8a;
+
+  /* Secondary Colors */
+  --secondary-color: #94a3b8;
+  --secondary-hover: #cbd5e1;
+  --secondary-light: #334155;
+
+  /* Success Colors */
+  --success-color: #22c55e;
+  --success-hover: #4ade80;
+  --success-light: #14532d;
+
+  /* Warning Colors */
+  --warning-color: #f59e0b;
+  --warning-hover: #fbbf24;
+  --warning-light: #78350f;
+
+  /* Danger Colors */
+  --danger-color: #ef4444;
+  --danger-hover: #f87171;
+  --danger-light: #7f1d1d;
+
+  /* Text Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-white: #ffffff;
+
+  /* Border Colors */
+  --border-color: #334155;
+  --border-dark: #475569;
+
+  /* ===== BORDER & SHAPE SYSTEM ===== */
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* ===== SPACING SYSTEM ===== */
+  /* Consistent Padding and Margin Values */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* ===== TYPOGRAPHY SYSTEM ===== */
+  /* Font Sizes */
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 18px;
+  --font-xl: 24px;
+  --font-2xl: 32px;
+  --font-3xl: 40px;
+
+  /* Font Weights */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* ===== EFFECTS SYSTEM ===== */
+  /* Box Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
 
   /* Transition Animation */
   --transition-fast: 0.2s ease;

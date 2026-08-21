@@ -1,16 +1,22 @@
 .sidebar {
   width: 286px;
   height: 100vh;
-  background: #fff;
-  border-right: 1px solid #ececec;
+  background: var(--bg-white);
+  border-right: 1px solid var(--border-color);
+
   display: flex;
   flex-direction: column;
+
   padding: 24px;
   overflow: auto;
-  transition: width 0.3s ease;
+
+  transition: width var(--transition-normal);
 }
 
-/* Logo */
+/* =========================
+   Logo
+   ========================= */
+
 .logo {
   display: flex;
   align-items: center;
@@ -21,11 +27,15 @@
 .logoIcon {
   width: 52px;
   height: 52px;
-  border-radius: 50%;
-  background: #2563eb;
-  color: white;
+
+  border-radius: var(--radius-full);
+
+  background: var(--primary-color);
+  color: var(--text-white);
+
   display: grid;
   place-items: center;
+
   font-size: 24px;
   flex-shrink: 0;
 }
@@ -33,20 +43,32 @@
 .logoText {
   overflow: hidden;
   white-space: nowrap;
-  transition: opacity 0.2s ease, max-width 0.3s ease;
+
   max-width: 200px;
+
+  color: var(--text-primary);
+
+  transition:
+    opacity 0.2s ease,
+    max-width 0.3s ease;
 }
 
-/* Navigation */
+
+/* =========================
+   Navigation
+   ========================= */
+
 nav {
   flex: 1;
 }
 
 .heading {
   margin: 28px 0 10px;
-  color: gray;
-  font-size: 12px;
-  font-weight: 700;
+
+  color: var(--text-muted);
+
+  font-size: var(--font-xs);
+  font-weight: var(--font-bold);
 }
 
 .menu {
@@ -62,23 +84,30 @@ nav {
 .menuItem {
   display: flex;
   align-items: center;
+
   gap: 14px;
-  /* padding: 12px; */
   padding: var(--space-sm);
-  border-radius: 12px;
+
+  border-radius: var(--radius-lg);
+  border: 1px solid transparent;
+
   font-size: var(--font-sm);
   text-decoration: none;
+
   color: var(--text-primary);
-  border: 1px solid transparent;
-  transition: background-color 0.2s ease,
-              color 0.2s ease;
+
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast);
 }
 
 .menuItem span {
+  display: block;
+
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: block;
 }
 
 .menuItem svg {
@@ -87,67 +116,78 @@ nav {
 }
 
 .menuItem:hover {
-  background: #edf4ff;
+  background: var(--primary-light);
+  color: var(--text-primary);
 }
 
+
+/* =========================
+   Active Menu
+   ========================= */
+
 .active {
-  background: #2563eb;
-  color: white;
+  background: var(--primary-color);
+  color: var(--text-white);
 }
 
 .active:hover {
-  background: #1d4ed8;
-  color: white;
+  background: var(--primary-hover);
+  color: var(--text-white);
 }
 
-/* Footer Card */
+
+/* =========================
+   Footer Card
+   ========================= */
+
 .card {
   min-height: 90px;
-  border-top: 1px solid #ececec;
-  /* border-radius: 16px; */
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: #f7f8fc;
-  transition: all 0.3s ease;
 
-  /* border: 1px solid #ececec;
-  border-radius: 16px;
-  padding: 18px;
+  border-top: 1px solid var(--border-color);
+
   display: flex;
   align-items: center;
+
   gap: 10px;
-  background: #f7f8fc;
-  margin-top: 24px;
-  transition: padding 0.3s ease; */
+
+  background: var(--bg-layout);
+
+  transition: all var(--transition-normal);
 }
 
 .cardText {
   flex: 1;
+
   margin: 0;
+
   line-height: 1.4;
+
+  color: var(--text-secondary);
+
   opacity: 1;
+
   transform: translateX(0);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  /* flex: 1;
-  white-space: normal;
-  overflow-wrap: break-word;
-  line-height: 1.4;
-  opacity: 1;
-  transition: opacity 0.2s ease; */
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .robot {
   font-size: 40px;
-  color: #2563eb;
+
+  color: var(--primary-color);
+
   flex-shrink: 0;
+
   transition: font-size 0.2s ease;
-  /* font-size: 40px;
-  color: #2563eb;
-  flex-shrink: 0; */
 }
 
-/* Collapsed state */
+
+/* =========================
+   Collapsed State
+   ========================= */
+
 .collapsed {
   width: 80px;
   padding: 16px 10px;
@@ -168,25 +208,19 @@ nav {
 }
 
 .collapsed .card {
-  /* width: 100%;
-  height: 64px;
-  padding: 0;
-  justify-content: center;
-  align-items: center;
-  gap: 0; */
   min-height: 64px;
+
   padding: 0;
+
   justify-content: center;
   gap: 0;
 }
 
 .collapsed .cardText {
-  /* opacity: 0;
-  width: 0;
-  overflow: hidden;
-  margin: 0; */
   opacity: 0;
+
   transform: translateX(-10px);
+
   width: 0;
 }
 
@@ -194,11 +228,17 @@ nav {
   font-size: 32px;
 }
 
-/* Hidden state */
+
+/* =========================
+   Hidden State
+   ========================= */
 
 .hidden {
   opacity: 0;
+
   max-width: 0;
+
   overflow: hidden;
+
   pointer-events: none;
 }
